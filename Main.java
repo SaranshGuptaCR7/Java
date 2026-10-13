@@ -1,20 +1,35 @@
-class Main{
-    public static void mian(String[] args){
-        String first = "COd";
-        String second = "ingal";
-        String codingal = first + second;
-        String codingalTrick = "welcome" + " to" + "Codingal";
-        String codingalCapital = codingal.toUpperCase();
-        String codinaglSmall = codingalCapital.toLowerCase();
+import java.util.*;
+public class Main{
+    public static Candidate getCandidateDetails() throws
+    InvalidInterException{
+        Scanner sc = nee Scanner(system.in);
+        System.out.println("Name");
+        String name = sc.next();
+        System.out.println("Gender");
+        String gender = sc.next();
+        System.out.println("Percentage in 10th");
+        int percenatge = sc.nextInt();
 
-        int lengthOfCodingal = codingal.length();
-        int lengthOfCodingalTrick = codingalTrick.length();
-        int sum = lengthOfCodingal + lengthOfCodingalTrick;
+        if (percentage < 50) {
+            throw new InvalidInterException("Registration failed Son! U registered in the wrong country try to register in India and do EXCEPTIONALLY GOOD WORK");
+            else{
+                Candidate candidate = new Candidate();
+                candidate.setName(name);
+                candidate.setGender(gender);
+                candidate.setPercentage(percenatge);
 
-        System.out.println(codingal);
-        System.out.println(codingalTrick);
-        System.out.println(codingalCapital);
-        System.out.println(codingalSmall);
-        System.out.println(sum);
+                return candidate:
+            }
+        }
+        public static void main(String[] args){
+            System.out.println("Welcome to Inter Hiring Tool for Netas");
+            try{
+                Cabdidate candidate = getCandidateDetails();
+                System.out.println("Registeration Successfull Son!");
+            }
+            catch(InvalidInterException e){
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }
